@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com.github.kotgi.greeting;
+
+service Greeter {
+  rpc greet (ClientInput) returns (ServerOutput);
+}
+
+message ClientInput {
+  string greeting = 1;
+  string name = 2;
+}
+
+message ServerOutput {
+  string message = 1;
+}
